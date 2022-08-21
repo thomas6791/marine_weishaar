@@ -1,0 +1,9 @@
+.btn {
+	font-size: 1em;
+	color: white;
+	text-decoration: none;
+	border-radius: 3px;
+	&.black {
+	background-color: $black;
+	}
+}
