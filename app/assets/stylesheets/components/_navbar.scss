@@ -12,73 +12,53 @@
 }
 .navbar2 {
   padding-right: min(20px);
-  padding-left: min(20px);
+  //padding-left: min(20px);
   max-width: 1500px;
   width: 100%;
   margin: auto;
   display: flex;
   border: solid 1px;
-
-  ul {
-  background: darkorange;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
+  & > ul {
+    display: flex;
+    padding-left: 0;
+  }
+  li {
+    font-family: verdana;
+    font-size: 12px;
+    color: #333;
+    line-height: 40px;
+    list-style-type: none;
+    /* [disabled]list-style-image: url(../images/li.png); */
+    background-color: white;
+    width: 100px;
+    float: right;
+    text-align: center;
+    height: 40px;
+    //margin-left: 2px;
+    display: block;
+  }
+  li ul {
+    display: none;
+    background-color: $green;
+    width:100%;
+    position: absolute;
+    left: 0;
+    padding-left: 0;
+  }
+  ul li ul li {
+    background-color: $green;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    float: left;
+}
+  li:hover {
+    background-color: $green;
+    cursor: pointer;
 }
 
-li {
-  color: #fff;
-  background: darkorange;
-  display: block;
-  float: left;
-  padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s;
-}
-  
-li a {
-  color: #fff;
-}
-
-li:hover,
-li:focus-within {
-  background: red;
-  cursor: pointer;
-}
-
-li:focus-within a {
-  outline: none;
-}
-
-ul li ul {
-  background: orange;
-  visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none;
-}
-
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
-   visibility: visible;
-   opacity: 1;
-   display: block;
-}
-
-ul li ul li {
-  clear: both;
-  width: 100%;
-}
-
-.dropdown {
-  display: flex;
+li:hover>ul {
+    display: block;
 }
 }
 
