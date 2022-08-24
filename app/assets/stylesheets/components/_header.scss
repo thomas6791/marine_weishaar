@@ -11,12 +11,17 @@
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&.terra {
 		background-color: $terra;
 	}
 	.boutons-header {
 		font-size: 0.8em;
+	}
+	.logo {
+		height: 60px;
+		width: auto;
 	}
 }
 .banner {
