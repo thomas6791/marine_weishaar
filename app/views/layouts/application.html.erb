@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MarineWeishaar</title>
+    <title>Marine Weishaar Immobilier</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,8 +9,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <body>
+    <%= render "shared/header" %>
+    <%= render "shared/navbar2" %>
+    <%= render "shared/flashes" %>
 
     <%= yield %>
   </body>
