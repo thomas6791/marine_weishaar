@@ -6,6 +6,9 @@
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 @media all and (min-width: 1024px) {
+  .fa-bars, #mobilenav {display:none;}
+    .navbar2 {
+  }
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
@@ -20,6 +23,36 @@
 }
 
 @media all and (max-width: 480px) {
+.boutons-header {
+    .btn {
+      display: none;
+    }
+    .fa-bars {font-size:2em;}
+  }
+  .navbar2 {
+    ul, a { display: none; }
+  }
+  #mobilenav {
+    position: absolute;
+    height: 100vh;
+    background-color: white;
+    z-index: 20;
+    top: 0;
+    padding: 0;
+    padding-left: min(20px);
+    width: 60vw;
+    left: 0;
+    div {
+      min-height: 100px;
+      display : flex;
+      align-items: center;
+    }
+    .logo { height: 60px;}
+    li {
+      list-style-type: none;
+      text-align: left;
+    }
+  }
   
 }
 
