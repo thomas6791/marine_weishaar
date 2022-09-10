@@ -9,21 +9,62 @@
   .fa-bars, #mobilenav {display:none;}
     .navbar2 {
   }
+  h1 { color: green;}
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
+.fa-bars, #mobilenav {display:none;}
+h1 { color: red;}
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-
+.fa-bars, #mobilenav {display:none;}
+h1 { color: blue;}
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
-  
+  h1 { color: orange;}
+  .fa-bars, #mobilenav {display:none;}
 }
 
 @media all and (max-width: 480px) {
-.boutons-header {
+  h1 { color: purple;}
+  #mobilenav {
+    position: absolute;
+    height: 100vh;
+    background-color: white;
+    z-index: 20;
+    top: 0;
+    padding: 0;
+    padding-left: min(20px);
+    width: 60vw;
+    left: 0;
+    div {
+      min-height: 100px;
+      display : flex;
+      align-items: center;
+    }
+    .logo { height: 60px;}
+    li {
+      list-style-type: none;
+      text-align: left;
+    }
+  }
+}
+
+/*------------------------------------------
+  Foundation Media Queries
+   http://foundation.zurb.com/docs/media-queries.html
+--------------------------------------------*/
+
+/* Small screens - MOBILE */
+@media only screen { } /* Define mobile styles - Mobile First */
+
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+  h1 { color: yellow;}
+  .boutons-header {
     .btn {
       display: none;
     }
@@ -53,21 +94,6 @@
       text-align: left;
     }
   }
-  
-}
-
-/*------------------------------------------
-  Foundation Media Queries
-   http://foundation.zurb.com/docs/media-queries.html
---------------------------------------------*/
-
-/* Small screens - MOBILE */
-@media only screen { } /* Define mobile styles - Mobile First */
-
-
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-@media only screen and (max-width: 40em) {
-  
 }
 
 /* Medium screens - TABLET */
