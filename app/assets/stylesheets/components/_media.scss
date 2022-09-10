@@ -37,7 +37,7 @@ h1 { color: blue;}
     top: 0;
     padding: 0;
     padding-left: min(20px);
-    width: 60vw;
+    width: 0vw;
     left: 0;
     div {
       min-height: 100px;
@@ -80,9 +80,9 @@ h1 { color: blue;}
     z-index: 20;
     top: 0;
     padding: 0;
-    padding-left: min(20px);
-    width: 60vw;
+    width: 0;
     left: 0;
+    visibility: hidden;
     div {
       min-height: 100px;
       display : flex;
@@ -92,6 +92,11 @@ h1 { color: blue;}
     li {
       list-style-type: none;
       text-align: left;
+    }
+    &.open {
+      width: 60vw;
+      padding-left: min(20px);
+      visibility: visible;
     }
   }
 }
