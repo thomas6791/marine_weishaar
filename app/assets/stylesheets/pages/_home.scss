@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.simple_form {
+    &.contact_mail {
+        display: flex;
+        flex-direction: column;
+    }
+.btn {
+    background-color: black;
+    color: white;
+}
+}
