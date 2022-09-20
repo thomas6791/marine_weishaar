@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
+  def contact_send
+    fail
+  end
 end
