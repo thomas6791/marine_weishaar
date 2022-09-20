@@ -1,3 +1,15 @@
 <%= image_tag 'https://t4.ftcdn.net/jpg/01/58/27/83/240_F_158278337_NZmaLKU5H260OzNjFwqM5S6cNBLC8ekL.jpg', class: "banner"%>
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+
+
+<%= simple_form_for :contact_mail, :url => '/contact_send' do |f| %>
+    <%= f.text_field :lastname, input_html: { value: nil }, placeholder: "Nom" %>
+    <%= f.text_field :firstname, input_html: { value: nil }, placeholder: "Prénom"%>
+    <%= f.text_field :email, input_html: { value: nil }, placeholder: "Email"%>
+    <%= f.text_field :tel, input_html: { value: nil }, placeholder: "Tel"%>
+    <%= f.text_field :message, input_html: { value: nil }, placeholder: "Votre demande"%>
+
+    <%= f.button :submit %>
+  <% end %>

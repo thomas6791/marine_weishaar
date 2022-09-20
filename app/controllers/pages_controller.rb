@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
+  def contact_send
+    ContactMailer.new_contact_email.deliver_later
+  end
 end
