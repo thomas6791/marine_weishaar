@@ -6,5 +6,6 @@ class PagesController < ApplicationController
   def contact_send
     contact = params[:contact_mail]
     ContactMailer.with(email: contact[:email], lastname: contact[:lastname], firstname: contact[:firstname], tel: contact[:tel], message: contact[:message]).new_contact_email.deliver_later
+    redirect_to root_path 
   end
 end
