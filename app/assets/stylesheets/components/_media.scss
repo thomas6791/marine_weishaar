@@ -50,6 +50,7 @@ h1 { color: blue;}
       text-align: left;
     }
   }
+  .simple_form { width: 100%;}
 }
 
 /*------------------------------------------
@@ -58,12 +59,14 @@ h1 { color: blue;}
 --------------------------------------------*/
 
 /* Small screens - MOBILE */
-@media only screen { } /* Define mobile styles - Mobile First */
+@media only screen {
+} /* Define mobile styles - Mobile First */
 
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (max-width: 40em) {
   h1 { color: yellow;}
+  .simple_form { width: 100% !important;}
   .boutons-header {
     .btn {
       display: none;
