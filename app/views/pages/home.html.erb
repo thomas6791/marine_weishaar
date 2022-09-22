@@ -1,4 +1,4 @@
-<%= image_tag 'https://t4.ftcdn.net/jpg/01/58/27/83/240_F_158278337_NZmaLKU5H260OzNjFwqM5S6cNBLC8ekL.jpg', class: "banner"%>
+<%= image_tag 'https://as1.ftcdn.net/v2/jpg/04/19/09/48/1000_F_419094889_eDaQJahzl1pBgKf8d0Xz0HoMCAt6DX8h.jpg', class: "banner"%>
 <section class="inside">
 </section>
 <section class="inside">
@@ -9,23 +9,24 @@
 </section>
 
 
-<section class="inside">
+<section class="inside contact-form">
 <%= simple_form_for :contact_mail, :url => '/contact_send' do |f| %>
   <h2>Nous contacter</h2>
   <div class="long">
-    <%= f.input :statut, label: false, collection:["Particulier","Professionnel"], input_html: { value: nil }, prompt: "Vous êtes" %>
-    <%= f.input :demande, label:false, collection:["Acheter","Vendre", "Louer","Gestion locative","Gestion de syndic"], input_html: { value: nil }, prompt: "Votre demande concerne"%>
+    <%= f.input :statut, label:"Vous êtes", collection:["Particulier","Professionnel"], input_html: { value: nil }, prompt: "" %>
+    <%= f.input :demande, label:"Votre demande concerne", collection:["Acheter","Vendre", "Louer","Gestion locative","Gestion de syndic"], input_html: { value: nil }, prompt: ""%>
   </div>
   <div class="long">
-    <%= f.input :lastname,label:false, input_html: { value: nil }, placeholder: "Nom" %>
-    <%= f.input :firstname,label:false, input_html: { value: nil }, placeholder: "Prénom"%>
+    <%= f.input :lastname,label:"Nom", input_html: { value: nil }, placeholder: "" %>
+    <%= f.input :firstname,label:"Prénom", input_html: { value: nil }, placeholder: ""%>
   </div>
   <div class="long">
-    <%= f.input :email,label:false, input_html: { value: nil }, placeholder: "Email"%>
-    <%= f.input :tel,label:false, input_html: { value: nil }, placeholder: "Tel"%>
+    <%= f.input :email,label:"Email", input_html: { value: nil }, placeholder: ""%>
+    <%= f.input :tel,label:"Tel", input_html: { value: nil }, placeholder: ""%>
   </div>
-    <%= f.input :message, as: :text, label: false, input_html: {:rows => 5}, placeholder: "Votre demande"%>
+    <%= f.input :message,label:"Message", as: :text, input_html: {:rows => 5}, placeholder: "" %>
     <%= f.input :accepts, as: :boolean, checked_value: 'positive', unchecked_value: 'negative', label:"J'accepte que mes données soient transmises dans le cadre de ma demande" %>
     <%= f.button :submit, 'Envoyer ma demande' %>
   <% end %>
+  <%= image_tag 'https://as2.ftcdn.net/v2/jpg/02/38/79/63/1000_F_238796325_jW2hwK0dds68xIscdYPTZ1XBQqvH6v4g.jpg' %>
 </section>
