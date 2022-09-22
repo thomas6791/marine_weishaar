@@ -1,0 +1,9 @@
+.simple_form {
+    input, textarea { width: 100%;}
+    .long {
+        display: flex;
+    }
+    &.contact_mail {
+        width: 50%;
+    }
+}
