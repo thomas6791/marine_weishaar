@@ -7,12 +7,15 @@
 
 <section class="inside">
 <%= simple_form_for :contact_mail, :url => '/contact_send' do |f| %>
+  <h2>Nous contacter</h2>
   <div class="long">
     <%= f.text_field :lastname, input_html: { value: nil }, placeholder: "Nom" %>
     <%= f.text_field :firstname, input_html: { value: nil }, placeholder: "Prénom"%>
   </div>
+  <div class="long">
     <%= f.text_field :email, input_html: { value: nil }, placeholder: "Email"%>
     <%= f.text_field :tel, input_html: { value: nil }, placeholder: "Tel"%>
+  </div>
     <%= f.text_field :message, input_html: { value: nil }, placeholder: "Votre demande"%>
 
     <%= f.button :submit, 'Envoyer ma demande' %>
