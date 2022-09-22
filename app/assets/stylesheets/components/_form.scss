@@ -1,7 +1,11 @@
 .simple_form {
-    input, textarea { width: 100%;}
+    input, textarea, select, .select, .string { width: 100%; margin: 0; margin-bottom: 1em;}
     .long {
         display: flex;
+        justify-content: space-between;
+        & > div {
+            width: 100%;
+        }
     }
     &.contact_mail {
         width: 50%;
@@ -10,5 +14,7 @@
     input[type=submit] {
         display: inline-flex;
         width: fit-content;
+        align-self: flex-end;
+        background-color: $yellow;
     }
 }
