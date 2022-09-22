@@ -22,7 +22,7 @@
     <%= f.text_field :email, input_html: { value: nil }, placeholder: "Email"%>
     <%= f.text_field :tel, input_html: { value: nil }, placeholder: "Tel"%>
   </div>
-    <%= f.text_field :message, input_html: {}, placeholder: "Votre demande"%>
+    <%= f.input :message, as: :text, label: false, input_html: {:rows => 5}, placeholder: "Votre demande"%>
     <%= f.button :submit, 'Envoyer ma demande' %>
   <% end %>
 </section>
