@@ -1,7 +1,5 @@
 <%= image_tag 'https://t4.ftcdn.net/jpg/01/58/27/83/240_F_158278337_NZmaLKU5H260OzNjFwqM5S6cNBLC8ekL.jpg', class: "banner"%>
 <section class="inside">
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 </section>
 <section class="inside">
 <h2>Nos derniers coups de coeur</h2>
@@ -27,6 +25,7 @@
     <%= f.input :tel,label:false, input_html: { value: nil }, placeholder: "Tel"%>
   </div>
     <%= f.input :message, as: :text, label: false, input_html: {:rows => 5}, placeholder: "Votre demande"%>
+    <%= f.input :accepts, as: :boolean, checked_value: 'positive', unchecked_value: 'negative', label:"J'accepte que mes données soient transmises dans le cadre de ma demande" %>
     <%= f.button :submit, 'Envoyer ma demande' %>
   <% end %>
 </section>

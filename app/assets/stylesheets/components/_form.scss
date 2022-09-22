@@ -1,4 +1,5 @@
 .simple_form {
+    font-family: "Montserrat";
     .mb-3 { margin: 0 !important;}
     input, textarea, select, .select, .string { width: 100%; margin: 0; margin-bottom: 8px;}
     .long {
@@ -14,6 +15,10 @@
     &.contact_mail {
         width: 50%;
         h2 { text-align: center;}
+    }
+    input[type=checkbox] {
+        display: inline-block;
+        width: 1em;
     }
     input[type=submit] {
         display: inline-flex;
