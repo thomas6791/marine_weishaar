@@ -102,6 +102,20 @@ h1 { color: blue;}
       visibility: visible;
     }
   }
+  .simple_form {
+    .long {
+      flex-wrap: wrap;
+      & > div { margin-right: 0; }
+      & > div:first-of-type {
+        margin-right: 0!important;
+      }
+    }
+    input[type=submit] {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 /* Medium screens - TABLET */

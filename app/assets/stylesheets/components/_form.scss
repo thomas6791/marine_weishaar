@@ -27,6 +27,11 @@
         width: fit-content;
         align-self: flex-end;
         background-color: $yellow;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .form-check-label.boolean.optional {
+        font-size: 0.7em;
     }
 }
 .inside.contact-form {
