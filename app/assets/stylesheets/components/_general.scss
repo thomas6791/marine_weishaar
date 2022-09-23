@@ -21,14 +21,15 @@ h2 { font-family: "Nothing You Could Do";}
         border: solid 1px blue;
         height: 30px;
         min-width: 20vw;
-        max-width:360px;
+        width: 100%;
+        //max-width:25%;
     }
     &.three {
         display: flex;
         justify-content: center;
         div {
-            min-width: 20vw;
-            max-width:360px;
+            //min-width: 20vw;
+            max-width:25%;
         }
     }
     &.four {
