@@ -1,15 +1,71 @@
 <%= image_tag 'https://as1.ftcdn.net/v2/jpg/04/19/09/48/1000_F_419094889_eDaQJahzl1pBgKf8d0Xz0HoMCAt6DX8h.jpg', class: "banner"%>
 <section class="inside">
 </section>
-<section class="inside">
+<section class="inside space-bottom">
 <h2>Nos derniers coups de coeur</h2>
+<div class="grille four">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
 </section>
-<section class="inside">
+<section class="inside space-bottom">
 <h2>Nous avons la solution pour votre projet immobilier</h2>
+<div class="grille three">
+  <div class="item">
+    <img src="https://cdn-icons-png.flaticon.com/128/738/738822.png">
+    <div>
+    <h3>Acheter</h3>
+    <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement<br>
+    <%= link_to "En savoir plus" %></p>
+    </div>
+  </div>
+  <div class="item">
+    <img src="https://cdn-icons-png.flaticon.com/128/738/738822.png">
+    <div>
+    <h3>Acheter</h3>
+    <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement<br>
+    <%= link_to "En savoir plus" %></p>
+    </div>
+  </div>
+  <div class="item">
+    <img src="https://cdn-icons-png.flaticon.com/128/738/738822.png">
+    <div>
+    <h3>Acheter</h3>
+    <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement<br>
+    <%= link_to "En savoir plus" %></p>
+    </div>
+  </div>
+  <div class="item">
+    <img src="https://cdn-icons-png.flaticon.com/128/738/738822.png">
+    <div>
+    <h3>Acheter</h3>
+    <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement<br>
+    <%= link_to "En savoir plus" %></p>
+    </div>
+  </div>
+  <div class="item">
+    <img src="https://cdn-icons-png.flaticon.com/128/738/738822.png">
+    <div>
+    <h3>Acheter</h3>
+    <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement<br>
+    <%= link_to "En savoir plus" %></p>
+    </div>
+  </div>
+  <div class="item">
+    <img src="https://cdn-icons-png.flaticon.com/128/738/738822.png">
+    <div>
+    <h3>Acheter</h3>
+    <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement<br>
+    <%= link_to "En savoir plus" %></p>
+    </div>
+  </div>
+</div>
 </section>
 
 
-<section class="inside contact-form">
+<section class="inside contact-form space-bottom">
 <%= simple_form_for :contact_mail, :url => '/contact_send' do |f| %>
   <h2>Nous contacter</h2>
   <div class="long">

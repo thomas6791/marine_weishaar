@@ -11,3 +11,42 @@ h2 { font-family: "Nothing You Could Do";}
         text-align: center;
     }
 }
+.space-bottom {
+    margin-bottom: 4em;
+}
+.grille {
+    display: grid;
+    grid-gap: 20px;
+    border: solid 1px red;
+    min-height: 50px;
+    margin: auto;
+    .item {
+        border: solid 1px blue;
+        height: auto;
+        min-width: 20%;
+        width: 100%;
+        //max-width:25%;
+    }
+    &.three {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .item {
+            display: flex;
+            //min-width: 20vw;
+            max-width:25%;
+            img {width: 25%; height: fit-content; margin-right: 10px;}
+            h3 {
+                font-size: 1.2em;
+                margin-bottom: 0;
+                font-weight: bold;
+            }
+            p {
+                flex-wrap: wrap;
+            }
+        }
+    }
+    &.four {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
