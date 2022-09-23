@@ -16,9 +16,11 @@ h2 { font-family: "Nothing You Could Do";}
     grid-gap: 10px;
     border: solid 1px red;
     min-height: 50px;
+    justify-content: center;
     div {
         border: solid 1px blue;
         height: 30px;
+        max-width:360px;
     }
     &.three {
         grid-template-columns: 1fr 1fr 1fr;
