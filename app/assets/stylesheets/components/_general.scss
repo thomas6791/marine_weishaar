@@ -11,3 +11,19 @@ h2 { font-family: "Nothing You Could Do";}
         text-align: center;
     }
 }
+.grille {
+    display: grid;
+    grid-gap: 10px;
+    border: solid 1px red;
+    min-height: 50px;
+    div {
+        border: solid 1px blue;
+        height: 30px;
+    }
+    &.three {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &.four {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
