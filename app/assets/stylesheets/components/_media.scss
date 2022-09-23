@@ -30,8 +30,8 @@ h1 { color: blue;}
 @media all and (max-width: 480px) {
   h1 { color: purple;}
   #mobilenav {
-    position: absolute;
-    height: 100vh;
+    height: 100%;
+    position: fixed;
     background-color: white;
     z-index: 20;
     top: 0;
@@ -77,8 +77,8 @@ h1 { color: blue;}
     ul, a { display: none; }
   }
   #mobilenav {
-    position: absolute;
-    height: 100vh;
+    height: 100%;
+    position: fixed;
     background-color: white;
     z-index: 20;
     top: 0;
