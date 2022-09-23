@@ -17,9 +17,9 @@ h2 { font-family: "Nothing You Could Do";}
     border: solid 1px red;
     min-height: 50px;
     margin: auto;
-    div {
+    .item {
         border: solid 1px blue;
-        height: 30px;
+        height: auto;
         min-width: 20vw;
         width: 100%;
         //max-width:25%;
@@ -27,9 +27,21 @@ h2 { font-family: "Nothing You Could Do";}
     &.three {
         display: flex;
         justify-content: center;
-        div {
+        .item {
             //min-width: 20vw;
             max-width:25%;
+        }
+        & > .item {
+            display: flex;
+            img {width: 25%; height: fit-content; margin-right: 10px;}
+            h3 {
+                font-size: 1.2em;
+                margin-bottom: 0;
+                font-weight: bold;
+            }
+            p {
+                flex-wrap: wrap;
+            }
         }
     }
     &.four {
