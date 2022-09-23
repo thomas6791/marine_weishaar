@@ -25,8 +25,8 @@
     <%= f.input :tel,label:"Tel", input_html: { value: nil }, placeholder: ""%>
   </div>
     <%= f.input :message,label:"Message", as: :text, input_html: {:rows => 5}, placeholder: "" %>
-    <%= f.input :accepts, as: :boolean, checked_value: 'positive', unchecked_value: 'negative', label:"J'accepte que mes données soient transmises dans le cadre de ma demande" %>
-    <%= f.button :submit, 'Envoyer ma demande' %>
+    <%= f.input :accepts, as: :boolean, checked_value: 'positive', unchecked_value: 'negative', label:"J'accepte que mes données soient transmises dans le cadre de ma démarche. En savoir plus sur notre politique de confidentialité" %>
+    <%= f.button :submit, 'Envoyer' %>
   <% end %>
   <%= image_tag 'https://as2.ftcdn.net/v2/jpg/02/38/79/63/1000_F_238796325_jW2hwK0dds68xIscdYPTZ1XBQqvH6v4g.jpg' %>
 </section>
