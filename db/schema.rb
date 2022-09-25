@@ -10,10 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_17_185408) do
+ActiveRecord::Schema.define(version: 2022_09_25_161031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "annonces", force: :cascade do |t|
+    t.string "titre"
+    t.string "town"
+    t.string "address"
+    t.string "cp"
+    t.string "type_bien"
+    t.integer "surface"
+    t.integer "nbre_chambre"
+    t.integer "nbre_bain"
+    t.boolean "balcon"
+    t.integer "nbre_garage"
+    t.text "description"
+    t.integer "nbre_cave"
+    t.string "cuisine"
+    t.integer "surface_sejour"
+    t.string "etat_general"
+    t.integer "etage"
+    t.integer "nbre_etage"
+    t.string "type_chauffage"
+    t.string "type_cuisine"
+    t.integer "annee_construction"
+    t.integer "nbre_piece"
+    t.integer "nbre_toilette"
+    t.integer "nbre_etage_annonce"
+    t.string "mode_chauffage"
+    t.boolean "ascenceur"
+    t.boolean "vue_degagee"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +79,5 @@ ActiveRecord::Schema.define(version: 2022_08_17_185408) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end
