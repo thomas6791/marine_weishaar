@@ -9,10 +9,11 @@
     ...<br>
     --------------------------
     </p>
+    <p>Type de contact: <%= @status %></p>
+    <p>Demande: <%= @type_demande %></p>
     <p>Nom: <%= @lastname %> <%= @firstname %></p>
     <p>Email: <%= @email %></p>
-    <p>Address: Adresse </p>
-    <p>Phone: <%= @tel %></p>
+    <p>Tel: <%= @tel %></p>
     <p>
     Message: <%= @message %><br>
     ----------
@@ -20,5 +21,6 @@
     <p>
     <%= @message %>
     </p>
+    <p>Accepte RGPD : <%= @rgpd %></p>
   </body>
 </html>
