@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+  def contact
+  end
   def contact_send
     contact = params[:contact_mail]
     if contact[:rgpd] == "positive"
