@@ -10,4 +10,9 @@ export default class extends Controller {
     console.log("click mobile")
     document.getElementById("mobilenav").classList.toggle("open");
   }
+  alertClose() {
+    console.log("flash alert")
+    let elementRemove = document.querySelector(".btn-close").parentElement;
+    elementRemove.remove();
+  }
 }
