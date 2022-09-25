@@ -12,7 +12,7 @@ class AnnoncesController < ApplicationController
   end
 
   def create
-    @annonce = Annonce.new(params[:annonce])
+    @annonce = Annonce.new(annonce_params)
     @annonce.save
   end
 

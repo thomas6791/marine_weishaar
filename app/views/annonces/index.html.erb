@@ -3,5 +3,8 @@
 <ul>
 <% @annonces.each do |annonce| %>
     <p><%= annonce.titre %></p>
+    <% annonce.photos.each do |photo| %>
+        <%= image_tag(photo) %>
+    <% end %>
 <% end %> 
 </ul>
