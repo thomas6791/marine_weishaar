@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_25_161031) do
+ActiveRecord::Schema.define(version: 2022_09_25_193406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2022_09_25_161031) do
     t.integer "nbre_toilette"
     t.integer "nbre_etage_annonce"
     t.string "mode_chauffage"
-    t.boolean "ascenceur"
+    t.boolean "ascenseur"
     t.boolean "vue_degagee"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
