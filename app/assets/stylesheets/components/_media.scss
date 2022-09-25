@@ -103,6 +103,10 @@ h1 {}
       visibility: visible;
     }
   }
+  .banner {
+    height: 25vh;
+    object-fit: cover;
+  }
   .simple_form {
     .long {
       flex-wrap: wrap;
