@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_17_185408) do
+ActiveRecord::Schema.define(version: 2022_09_25_143443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "annonces", force: :cascade do |t|
+    t.string "titre"
+    t.string "town"
+    t.string "adress"
+    t.string "type_bien"
+    t.integer "surface"
+    t.integer "nbre_chambre"
+    t.integer "nbre_bain"
+    t.boolean "balcon"
+    t.integer "nbre_garage"
+    t.text "description"
+    t.integer "nbre_cave"
+    t.string "cuisine"
+    t.integer "surface_sejour"
+    t.string "etat_general"
+    t.integer "etage"
+    t.integer "nbre_etage"
+    t.string "type_chauffage"
+    t.string "type_cuisine"
+    t.integer "annee_construction"
+    t.integer "nbre_piece"
+    t.integer "nbre_toilette"
+    t.integer "nbre_etage_annonce"
+    t.string "mode_chauffage"
+    t.boolean "ascenceur"
+    t.boolean "vue_degagee"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
