@@ -22,8 +22,8 @@ class AnnoncesController < ApplicationController
 
   def update
     @annonce = Annonce.find(params[:id])
-    @annonce.update(annonce
-    redirect_to annonce_path(@annonce)_params)
+    @annonce.update(annonce_params)
+    redirect_to annonce_path(@annonce)
   end
 
   def destroy
