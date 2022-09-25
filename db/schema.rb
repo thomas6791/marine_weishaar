@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2022_09_25_143443) do
   create_table "annonces", force: :cascade do |t|
     t.string "titre"
     t.string "town"
-    t.string "adress"
+    t.string "address"
+    t.string "cp"
     t.string "type_bien"
     t.integer "surface"
     t.integer "nbre_chambre"
