@@ -1,11 +1,9 @@
 <h1>Annonces#index</h1>
 <p>Find me in app/views/annonces/index.html.erb</p>
-<ul>
+
+
 <% @annonces.each do |annonce| %>
-    <p><%= annonce.titre %></p>
     <% annonce.photos.each do |photo| %>
-        <%= cl_image_tag(photo.key, width: 300, height: 200, crop: :scale, effect: "") %>
-        <%= cl_image_tag photo.key, class: "" %>
+        <%= cl_image_tag photo.key, width: 200, crop: :fill %>
     <% end %>
-<% end %> 
-</ul>
+<% end %>
