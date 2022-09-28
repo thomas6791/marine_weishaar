@@ -4,7 +4,8 @@
 <% @annonces.each do |annonce| %>
     <p><%= annonce.titre %></p>
     <% annonce.photos.each do |photo| %>
-        <%= image_tag(url_for(photo)) %>
+        <%= cl_image_tag(photo.key, width: 300, height: 200, crop: :scale, effect: "") %>
+        <%= cl_image_tag photo.key, class: "" %>
     <% end %>
 <% end %> 
 </ul>
