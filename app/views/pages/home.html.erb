@@ -4,10 +4,14 @@
 <section class="inside space-bottom">
 <h2>Nos derniers coups de coeur</h2>
 <div class="grille four">
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
+<% @last_annonces.each do |annonce|%>
+  <div class="item annonce">
+  <%= cl_image_tag annonce.photos[0].key %>
+  <h3><%= annonce.titre%></h3>
+  <p><%= annonce.town %></p>
+  <p><%= annonce.price%></p>
+  </div>
+<% end %>
 </div>
 </section>
 <section class="inside space-bottom">

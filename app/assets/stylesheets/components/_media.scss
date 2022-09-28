@@ -131,6 +131,9 @@ h1 {}
       //flex-direction: column;
     }
   }
+  .grille.four {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Medium screens - TABLET */
