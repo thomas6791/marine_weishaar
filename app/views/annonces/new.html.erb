@@ -4,6 +4,9 @@
 <%= simple_form_for(@annonce) do |f| %>
     <!-- [...] -->
     <%= f.input :titre %>
+    <%= f.input :address %>
+    <%= f.input :town %>
+    <%= f.input :cp %>
     <%= f.file_field :photos, multiple: true %>
     <%= f.button :submit %>
     <!-- [...] -->
