@@ -6,7 +6,7 @@
   <h2>Nous contacter</h2>
   <div class="long">
     <%= f.input :status, label:"Vous êtes", collection:["Particulier","Professionnel"], input_html: { value: nil }, prompt: "", required: true %>
-    <%= f.input :demande, label:"Votre demande concerne", collection:["Acheter","Vendre", "Louer","Gestion locative","Gestion de syndic"], input_html: { value: nil }, prompt: "", required: true %>
+    <%= f.input :demande, label:"Votre demande concerne", collection:["Acheter","Vendre", "Louer","Gestion locative","Estimation","Autre"], input_html: { value: nil }, prompt: "", required: true %>
   </div>
   <div class="long">
     <%= f.input :lastname,label:"Nom", input_html: { value: nil }, placeholder: "", required: true %>
