@@ -44,8 +44,8 @@
   <div class="item">
     <%= image_tag "syndic.png", class:"" %>
     <div>
-    <h3>Gestion de syndic</h3>
-    <p class="min-text">Confiez nous la bonne gestion de votre copropriété<br>
+    <h3>Home staging</h3>
+    <p class="min-text">Valoriser votre bien pour la vente<br>
     <%= link_to "En savoir plus" %></p>
     </div>
   </div>
@@ -74,7 +74,7 @@
   <h2>Nous contacter</h2>
   <div class="long">
     <%= f.input :status, label:"Vous êtes", collection:["Particulier","Professionnel"], input_html: { value: nil }, prompt: "", required: true %>
-    <%= f.input :demande, label:"Votre demande concerne", collection:["Acheter","Vendre", "Louer","Gestion locative","Estimation"], input_html: { value: nil }, prompt: "", required: true %>
+    <%= f.input :demande, label:"Votre demande concerne", collection:["Acheter","Vendre", "Louer","Gestion locative","Estimation","Autre"], input_html: { value: nil }, prompt: "", required: true %>
   </div>
   <div class="long">
     <%= f.input :lastname,label:"Nom", input_html: { value: nil }, placeholder: "", required: true %>

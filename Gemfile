@@ -35,6 +35,8 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem 'postmark-rails'
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem 'money-rails', '~>1.12'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
