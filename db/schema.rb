@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 2022_10_01_111625) do
     t.string "dpe"
     t.string "ges"
     t.integer "price_cents", default: 0, null: false
-    t.string "price_currency", default: "USD", null: false
   end
 
   create_table "users", force: :cascade do |t|
