@@ -1,10 +1,13 @@
 footer {
     min-height: 10em;
     background-color: $black;
-    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: center;
     a, p { color: white; text-decoration: none;}
     a {
         margin-right: 15px;
+        font-size: 0.8em;
     }
     a:hover {
         text-decoration: none;
@@ -17,7 +20,9 @@ footer {
         //margin: auto;
     }
     div:first-of-type {
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        align-self: end;
+        width: 100%;
     }    
 }
