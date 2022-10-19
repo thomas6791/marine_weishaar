@@ -6,7 +6,9 @@
 <div class="grille four">
 <% @last_annonces.each do |annonce|%>
   <div class="item annonce">
+  <% if annonce.photos[0] != nil %>
   <%= cl_image_tag annonce.photos[0].key %>
+  <% end %>
   <h3 class="annonce-titre"><%= annonce.titre%></h3>
   <p class="annonce-town"><%= annonce.town %></p>
   <p class="annonce-price"><%= annonce.price%></p>
