@@ -1,14 +1,21 @@
-<h1>Annonces#index</h1>
-<p>Find me in app/views/annonces/index.html.erb</p>
+<h1>Annonces</h1>
 
-
-<% @annonces.each do |annonce| %>
-    <% annonce.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, width: 200, crop: :fill %>
+<section id="map-annonces">
+<ul id="annonces">
+<% @annonces.each do |annonce|%>
+    <li class="item annonce">
+    <% if annonce.photos[0] != nil %>
+    <%= cl_image_tag annonce.photos[0].key %>
     <% end %>
-<% end %>
-
-<div style="width: 100%; height: 600px;"
+    <h3 class="annonce-titre"><%= annonce.titre%></h3>
+    <p class="annonce-town"><%= annonce.town %></p>
+    <p class="annonce-price"><%= annonce.price%></p>
+    </li>
+  <% end %>
+</ul>
+<div id="map"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+</section>
