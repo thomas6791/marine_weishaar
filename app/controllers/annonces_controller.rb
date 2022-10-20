@@ -1,6 +1,14 @@
 class AnnoncesController < ApplicationController
   def index
     @annonces = Annonce.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @annonces.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {flat: flat})
+      }
+    end
   end
 
   def new
