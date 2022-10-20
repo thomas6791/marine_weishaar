@@ -1,4 +1,5 @@
 class AnnoncesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @annonces = Annonce.all
     # The `geocoded` scope filters only flats with coordinates
