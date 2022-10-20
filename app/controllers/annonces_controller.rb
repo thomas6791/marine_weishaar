@@ -21,8 +21,10 @@ class AnnoncesController < ApplicationController
 
   def create
     @annonce = Annonce.new(annonce_params)
+    @annonce.town = @annonce.town.upcase
     @annonce.full_address = @annonce.address + " " + @annonce.cp + " " + @annonce.town
     @annonce.save
+    redirect_to annonces_path
   end
 
   def edit
