@@ -21,6 +21,7 @@ class AnnoncesController < ApplicationController
 
   def create
     @annonce = Annonce.new(annonce_params)
+    @annonce.full_address = "#{@annonce.address} #{@annonce.cp} #{@annonce.town}"
     @annonce.save
   end
 
