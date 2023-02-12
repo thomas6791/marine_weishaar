@@ -74,6 +74,7 @@
 <section class="inside contact-form space-bottom">
 <%= simple_form_for :contact_mail, :url => '/contact_send' do |f| %>
   <h2>Nous contacter</h2>
+  <%= f.email_field :hidden_message, placeholder: 'Message', class: 'hidden-message' %>
   <div class="long">
     <%= f.input :status, label:"Vous êtes", collection:["Particulier","Professionnel"], input_html: { value: nil }, prompt: "", required: true %>
     <%= f.input :demande, label:"Votre demande concerne", collection:["Acheter","Vendre", "Louer","Gestion locative","Estimation","Autre"], input_html: { value: nil }, prompt: "", required: true %>
