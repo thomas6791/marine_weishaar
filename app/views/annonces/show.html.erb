@@ -2,9 +2,17 @@
 <% if @annonce.photos[0] != nil %>
     <%= cl_image_tag @annonce.photos[0].key, class: 'annonce-banner' %>
 <% end %>
-<section class="inside">
+<section class="inside annonce-show">
 <div>
-<p><%= @annonce.titre %></p>
+<h1>
+<%= @annonce.titre %>
+<%= @annonce.town %>
+</h1>
 <p><%= @annonce.price.fractional %><%= @annonce.price.currency.symbol %></p>
 </div>
 </section>
+<section class="inside annonce-show">
+<h2>Description</h2>
+<p><%= @annonce.description %></p>
+</section>
+
