@@ -45,6 +45,11 @@ class AnnoncesController < ApplicationController
     redirect_to annonces_path, status: :see_other
   end
 
+  def alsace
+  end
+  def bas_rhin
+  end
+
   def annonce_params
     params.require(:annonce).permit(:titre, :town, :address, :cp, :full_address, :type_bien, :surface, :nbre_chambre, :nbre_bain,:balcon,:nbre_garage,:description,:nbre_cave,:cuisine,:surface_sejour,:etat_general,:etage,:nbre_etage,:type_chauffage,:type_cuisine,:annee_construction,:nbre_piece,:nbre_toilette,:nbre_etage_annonce,:mode_chauffage,:ascenceur,:price,:dpe,:vue_degagee,photos: [])
   end
