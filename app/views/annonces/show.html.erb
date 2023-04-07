@@ -1,2 +1,10 @@
-<h1>Annonces#show</h1>
-<p>Find me in app/views/annonces/show.html.erb</p>
+
+<% if @annonce.photos[0] != nil %>
+    <%= cl_image_tag @annonce.photos[0].key, class: 'annonce-banner' %>
+<% end %>
+<section class="inside">
+<div>
+<p><%= @annonce.titre %></p>
+<p><%= @annonce.price.fractional %><%= @annonce.price.currency.symbol %></p>
+</div>
+</section>
