@@ -12,7 +12,7 @@
 <ul id="annonces">
 <% @annonces.each do |annonce|%>
   <%= link_to annonce_path(annonce) do %>
-    <li class="annonce">
+    <li class="annonce" data-id=<%= annonce.id %> >
     <% if annonce.photos[0] != nil %>
     <%= cl_image_tag annonce.photos[0].key %>
     <% end %>
