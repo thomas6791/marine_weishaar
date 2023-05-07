@@ -61,6 +61,15 @@ h1 {}
 
 /* Small screens - MOBILE */
 @media only screen {
+  #map-annonces
+   {
+    #annonces {
+      grid-template-columns: 1fr;
+    }
+    #map {
+      display: none;
+    }
+   }
 } /* Define mobile styles - Mobile First */
 
 
