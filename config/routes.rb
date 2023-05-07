@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :annonces, path: "achat-immobiler" do
+  resources :annonces, path: "achat-immobilier" do
     get :strasbourg, on: :collection
   end
   root to: "pages#home"

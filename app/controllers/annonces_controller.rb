@@ -51,7 +51,14 @@ class AnnoncesController < ApplicationController
   def bas_rhin
   end
   def strasbourg
-    fail
+    @annonces = Annonce.where(town: "STRASBOURG")
+    @markers = @annonces.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {flat: flat})
+      }
+    end
   end
 
   def annonce_params
