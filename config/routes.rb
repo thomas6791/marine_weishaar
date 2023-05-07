@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  scope module: 'annonces', path: 'achat-immobilier' do
-    resources :annonces
+  resources :annonces, path: "achat-immobiler" do
+    get :strasbourg, on: :collection
   end
   root to: "pages#home"
   get "contact", to: "pages#contact"
