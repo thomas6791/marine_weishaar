@@ -61,15 +61,7 @@ h1 {}
 
 /* Small screens - MOBILE */
 @media only screen {
-  #map-annonces
-   {
-    #annonces {
-      grid-template-columns: 1fr;
-    }
-    #map {
-      display: none;
-    }
-   }
+
 } /* Define mobile styles - Mobile First */
 
 
@@ -143,6 +135,15 @@ h1 {}
   .grille.four {
     grid-template-columns: 1fr;
   }
+  #map-annonces
+   {
+    #annonces {
+      grid-template-columns: 1fr;
+    }
+    #map {
+      display: none;
+    }
+   }
 }
 
 /* Medium screens - TABLET */
