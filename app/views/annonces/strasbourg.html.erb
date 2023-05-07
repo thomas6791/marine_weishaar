@@ -1,0 +1,33 @@
+<h1>Acheter un bien immobilier à Strasbourg</h1>
+<div id="filtres">
+<ul>
+<li>ville</li>
+<li>type de bien</li>
+<li>budget min max</li>
+<li>nbre de pièces min_max</li>
+<li>surface min_max</li>
+</ul>
+</div>
+<section id="map-annonces">
+<ul id="annonces">
+<% @annonces.each do |annonce|%>
+  <%= link_to annonce_path(annonce) do %>
+    <li class="annonce">
+    <% if annonce.photos[0] != nil %>
+    <%= cl_image_tag annonce.photos[0].key %>
+    <% end %>
+    <div class="annonce-card-description">
+      <h3 class="annonce-titre"><%= annonce.titre%></h3>
+      <p class="annonce-town"><%= annonce.town %></p>
+      <p class="annonce-price"><%= annonce.price %> <%= annonce.price.currency.symbol %></p>
+    </div>
+    </li>
+    <% end %>
+  <% end %>
+</ul>
+<div id="map"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+</section>

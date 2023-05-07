@@ -50,6 +50,9 @@ class AnnoncesController < ApplicationController
   end
   def bas_rhin
   end
+  def strasbourg
+    fail
+  end
 
   def annonce_params
     params.require(:annonce).permit(:titre, :town, :address, :cp, :full_address, :type_bien, :surface, :nbre_chambre, :nbre_bain,:balcon,:nbre_garage,:description,:nbre_cave,:cuisine,:surface_sejour,:etat_general,:etage,:nbre_etage,:type_chauffage,:type_cuisine,:annee_construction,:nbre_piece,:nbre_toilette,:nbre_etage_annonce,:mode_chauffage,:ascenceur,:price,:dpe,:vue_degagee,photos: [])

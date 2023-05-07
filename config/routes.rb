@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :annonces, path:'achat-immobilier'
+  
   root to: "pages#home"
   get "contact", to: "pages#contact"
   post "contact_send", to: "pages#contact_send"
