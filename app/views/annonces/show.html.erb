@@ -19,11 +19,7 @@
     <h3>Renseignements complémentaires</h3>
     <div>
     <table>
-    <thead>
-        <tr>
-            <th colspan="3">The table header</th>
-        </tr>
-    </thead>
+
     <tbody>
         <tr>
             <td><p>Surface habitable: <span><%= @annonce.surface if !@annonce.surface.nil? %></span></p></td>
@@ -33,15 +29,15 @@
         <tr>
             <td><p>Nbre de salle de bain : <span><%= @annonce.nbre_bain if @annonce.nbre_bain.nil? %></span></p></td>
             <td><p>Balcon : <span><%= @annonce.balcon if @annonce.balcon.nil? %></span></p></td>
-            <td><p>Nombre de garages : <span><%= @annonce.nbre_garage if @annonce.nbre_garage.nil? %></span></p><td>
+            <td><p>Nombre de garages : <span><%= @annonce.nbre_garage if @annonce.nbre_garage.nil? %></span></p></td>
         </tr>
         <tr>
-            <td><p>Nombre de caves : <span><%= @annonce.nbre_cave if @annonce.nbre_cave.nil? %></span></p><td>
-            <td><p>Cuisine : <span><%= @annonce.cuisine if @annonce.cuisine.nil? %></span></p><td>
-            <td><p>Surface du séjour : <span><%= @annonce.surface_sejour if @annonce.surface_sejour.nil? %></span></p><td>
+            <td><p>Nombre de caves : <span><%= @annonce.nbre_cave if @annonce.nbre_cave.nil? %></span></p></td>
+            <td><p>Cuisine : <span><%= @annonce.cuisine if @annonce.cuisine.nil? %></span></p></td>
+            <td><p>Surface du séjour : <span><%= @annonce.surface_sejour if @annonce.surface_sejour.nil? %></span></p></td>
         </tr>
         <tr>
-            <td><p>Etat général : <span><%= @annonce.etat_general if @annonce.etat_general.nil? %></span></p><td>
+            <td><p>Etat général : <span><%= @annonce.etat_general if @annonce.etat_general.nil? %></span></p></td>
             <td><p>Etage : <span><%= @annonce.etage if @annonce.etage.nil? %></span></p></td>
             <td><p>Nombre d'etages : <span><%= @annonce.nbre_etage if @annonce.nbre_etage.nil? %></span></p></td>
         </tr>
