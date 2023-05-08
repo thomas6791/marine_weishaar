@@ -47,11 +47,9 @@ a > .annonce {
     }
 }
 #tableaux-energie {
-    display: flex !important;
+    display: flex;
     width: 100%;
-    border: solid 1px;
-}
-.sub-tableau {
-    width: 100%;
-    border: solid 1px blue;
+    div {
+        width: 100%;
+    }
 }
