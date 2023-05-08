@@ -29,27 +29,33 @@
             <td><p>Surface habitable: <span><%= @annonce.surface if !@annonce.surface.nil? %></span></p></td>
             <td><p>Type de bien : <span><%= @annonce.type_bien if !@annonce.type_bien.nil? %></span></p></td>
             <td><p>Nbre de chambres : <span><%= @annonce.nbre_chambre if !@annonce.nbre_chambre.nil? %></span></p></td>
-            <td><p>Type de chauffage : <span><%= @annonce.type_chauffage if @annonce.type_chauffage.nil? %></span></p></td>
         </tr>
         <tr>
             <td><p>Nbre de salle de bain : <span><%= @annonce.nbre_bain if @annonce.nbre_bain.nil? %></span></p></td>
             <td><p>Balcon : <span><%= @annonce.balcon if @annonce.balcon.nil? %></span></p></td>
             <td><p>Nombre de garages : <span><%= @annonce.nbre_garage if @annonce.nbre_garage.nil? %></span></p><td>
-            <td><p>Type de cuisine : <span><%= @annonce.type_cuisine if @annonce.type_cuisine.nil? %></span></p></td>
-            <td><p>Nbre de toilette : <span><%= @annonce.nbre_toilette if @annonce.nbre_toilette.nil? %></span></p></td>
         </tr>
         <tr>
             <td><p>Nombre de caves : <span><%= @annonce.nbre_cave if @annonce.nbre_cave.nil? %></span></p><td>
             <td><p>Cuisine : <span><%= @annonce.cuisine if @annonce.cuisine.nil? %></span></p><td>
             <td><p>Surface du séjour : <span><%= @annonce.surface_sejour if @annonce.surface_sejour.nil? %></span></p><td>
-            <td><p>Année de construction : <span><%= @annonce.annee_construction if @annonce.annee_construction.nil? %></span></p></td>
-            <td><p>Vue dégagée : <span><%= @annonce.vue_degagee if @annonce.vue_degagee.nil? %></span></p></td>
         </tr>
         <tr>
             <td><p>Etat général : <span><%= @annonce.etat_general if @annonce.etat_general.nil? %></span></p><td>
             <td><p>Etage : <span><%= @annonce.etage if @annonce.etage.nil? %></span></p></td>
             <td><p>Nombre d'etages : <span><%= @annonce.nbre_etage if @annonce.nbre_etage.nil? %></span></p></td>
+        </tr>
+        <tr>
+            <td><p>Type de chauffage : <span><%= @annonce.type_chauffage if @annonce.type_chauffage.nil? %></span></p></td>
+            <td><p>Type de cuisine : <span><%= @annonce.type_cuisine if @annonce.type_cuisine.nil? %></span></p></td>
+            <td><p>Nbre de toilette : <span><%= @annonce.nbre_toilette if @annonce.nbre_toilette.nil? %></span></p></td>
+        </tr>
+        <tr>
+            <td><p>Année de construction : <span><%= @annonce.annee_construction if @annonce.annee_construction.nil? %></span></p></td>
+            <td><p>Vue dégagée : <span><%= @annonce.vue_degagee if @annonce.vue_degagee.nil? %></span></p></td>
             <td><p>Nbre de pièces : <span><%= @annonce.nbre_piece if @annonce.nbre_piece.nil? %></span></p></td>
+        </tr>
+        <tr>
             <td><p>Ascenseur : <span><%= @annonce.ascenseur if @annonce.ascenseur.nil? %></span></p></td>
         </tr>
         

@@ -58,5 +58,9 @@ a > .annonce {
     table {
         width: 100%;
         border: solid 1px;
+        tr {
+            display: flex;
+            td { width: 33%; border: solid 1px;}
+        }
     }
 }
