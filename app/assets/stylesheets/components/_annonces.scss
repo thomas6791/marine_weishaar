@@ -46,6 +46,11 @@ a > .annonce {
         text-decoration: none;
     }
 }
+.annonce-show {
+    h1, h2 {
+        font-weight: 400;
+    }
+}
 #tableaux-energie {
     display: flex;
     width: 100%;
@@ -54,13 +59,26 @@ a > .annonce {
     }
 }
 .accordion-infos {
-    border: solid 1px;
+    //border: solid 1px;
+    border-radius: 3px;
+    padding: 1em;
+    border: solid 1px lightgrey;
+    background-color: #fffefe;
+    margin-bottom: 2px;
+    h2, h3, h4 { margin: 0; padding: 0; font-weight: 300; font-size: 1em;}
+    summary {
+        list-style-type: '';
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
     table {
         width: 100%;
-        border: solid 1px;
+        border: solid 1px lightgrey;
         tr {
             display: flex;
-            td { width:100%; border: solid 1px;}
+            td { width:100%; border: solid 1px lightgrey;}
         }
     }
 }
