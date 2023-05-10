@@ -17,7 +17,8 @@ class AnnoncesController < ApplicationController
   end
 
   def show
-    @annonce = Annonce.find(params[:id])
+    @annonce = Annonce.friendly.find(params[:id])
+  
   end
 
   def create
@@ -43,6 +44,21 @@ class AnnoncesController < ApplicationController
     @annonce.destroy
     # No need for app/views/restaurants/destroy.html.erb
     redirect_to annonces_path, status: :see_other
+  end
+
+  def alsace
+  end
+  def bas_rhin
+  end
+  def strasbourg
+    @annonces = Annonce.where(town: "STRASBOURG")
+    @markers = @annonces.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {flat: flat})
+      }
+    end
   end
 
   def annonce_params

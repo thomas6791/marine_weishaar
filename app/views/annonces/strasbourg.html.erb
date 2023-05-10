@@ -1,4 +1,4 @@
-<h1>Annonces</h1>
+<h1>Acheter un bien immobilier à Strasbourg</h1>
 <div id="filtres">
 <ul>
 <li>ville</li>
@@ -12,7 +12,7 @@
 <ul id="annonces">
 <% @annonces.each do |annonce|%>
   <%= link_to annonce_path(annonce) do %>
-    <li class="annonce" data-id=<%= annonce.id %> >
+    <li class="annonce">
     <% if annonce.photos[0] != nil %>
     <%= cl_image_tag annonce.photos[0].key %>
     <% end %>

@@ -40,7 +40,8 @@
     flex-wrap: wrap;
     img { width: 50%;}
     .simple_form {
-        background: rgba(151, 179, 164, 0.5);
+        //background: rgba(151, 179, 164, 0.5);
+        background-color: $terra;
         /* Rectangle 35 */
         padding: 20px;
         padding-top: 2em;
