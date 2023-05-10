@@ -2,16 +2,27 @@
 <% if @annonce.photos[0] != nil %>
     <%= cl_image_tag @annonce.photos[0].key, class: 'annonce-banner' %>
 <% end %>
-<section class="inside annonce-show">
-<div>
-<h1>
-<%= @annonce.titre %>
-<%= @annonce.town %>
-</h1>
-<p><%= @annonce.price.fractional %><%= @annonce.price.currency.symbol %></p>
+<div class="inside annonce-show flex-show">
+<section class="main-show">
+<div class="main-show-entete">
+    <div>
+        <h1>
+            <%= @annonce.titre %>
+        </h1>
+        <h2><%= image_tag "marker.png", width:16 %><%= @annonce.town %></h2>
+        <p><%= @annonce.price.fractional %><%= @annonce.price.currency.symbol %></p>
+    </div>
+    <div class="main-show-pictos">
+        <ul>
+            <li><%= image_tag "type-bien.png", width:64 %><p>Type de bien</p></li>
+            <li><%= image_tag "surface.png", width:64 %><p>Surface</p></li>
+            <li><%= image_tag "pieces.png", width:64 %><p>xxx pièces</p></li>
+            <li><%= image_tag "chambre.png", width:64 %><p>chambres</p></li>
+            <li><%= image_tag "baignoire.png", width:64 %><p>salles de bain</p></li>
+        </ul>
+    </div>
 </div>
-</section>
-<section class="inside annonce-show">
+
 <h2>Description</h2>
 <p><%= @annonce.description %></p>
 
@@ -145,5 +156,16 @@
     </div>
 </div>
 </details>
+</section>
+
+<aside>
+<h2>Marine Weishaar
+<span>Agent immobilier</span>
+</h2>
+</aside>
+
+</div>
+<section class="inside map-show">
+<h2>MAP</h2>
 </section>
 
