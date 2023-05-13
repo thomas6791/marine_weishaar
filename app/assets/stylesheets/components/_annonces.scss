@@ -78,10 +78,25 @@ a > .annonce {
     }
     table {
         width: 100%;
-        border: solid 1px lightgrey;
+        margin-top: 0.8em;
+        //border: solid 0.5px lightgrey;
         tr {
             display: flex;
-            td { width:100%; border: solid 1px lightgrey;}
+            td {
+                 width:100%; border: solid 0.5px lightgrey;
+                 display: flex;
+                 align-items: center;
+                 padding: 5px 0px 5px 10px;
+                 p {margin: 0;}
+            }
+        }
+    }
+    #tableaux-energie {
+        h4 {
+            margin-bottom: 0.8em;
+        }
+        .tableau-energie {
+            margin-top: 0.8em;
         }
     }
 }
