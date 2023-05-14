@@ -18,7 +18,8 @@ class AnnoncesController < ApplicationController
 
   def show
     @annonce = Annonce.friendly.find(params[:id])
-  
+    @markers = [{:lat=> @annonce.latitude, :lng=> @annonce.longitude}]
+    #[{:lat=>49.0154694, :lng=>7.6205398
   end
 
   def create
@@ -30,17 +31,17 @@ class AnnoncesController < ApplicationController
   end
 
   def edit
-    @annonce = Annonce.find(params[:id])
+    @annonce = Annonce.friendly.find(params[:id])
   end
 
   def update
-    @annonce = Annonce.find(params[:id])
+    @annonce = Annonce.friendly.find(params[:id])
     @annonce.update(annonce_params)
     redirect_to annonce_path(@annonce)
   end
 
   def destroy
-    @annonce = Annonce.find(params[:id])
+    @annonce = Annonce.friendly.find(params[:id])
     @annonce.destroy
     # No need for app/views/restaurants/destroy.html.erb
     redirect_to annonces_path, status: :see_other

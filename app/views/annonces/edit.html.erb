@@ -1,2 +1,22 @@
 <h1>Annonces#edit</h1>
 <p>Find me in app/views/annonces/edit.html.erb</p>
+
+<section class="inside contact-form space-bottom">
+    <%= simple_form_for(@annonce) do |f| %>
+        <%= f.input :titre %>
+        <%= f.input :address %>
+        <%= f.input :town %>
+        <%= f.input :cp %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.input :type_bien %>
+        <%= f.input :surface %>
+        <%= f.input :nbre_chambre %>
+        <%= f.input :nbre_bain %>
+        <%= f.input :nbre_piece %>
+        <%= f.input :dpe %>
+        <%= f.input :ges %>
+        <%= f.file_field :photos, multiple: true %>
+        <%= f.button :submit %>
+    <% end %>
+</section>
