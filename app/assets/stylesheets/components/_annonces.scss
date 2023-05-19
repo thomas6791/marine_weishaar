@@ -69,6 +69,7 @@ a > .annonce {
     background-color: #fffefe;
     margin-bottom: 2px;
     h2, h3, h4 { margin: 0; padding: 0; font-weight: 300; font-size: 1em;}
+    
     summary {
         list-style-type: '';
         display: flex;
@@ -134,6 +135,14 @@ a > .annonce {
             a {
                 padding: 5px;
                 img { width: 40px;}
+                &:hover {
+                    img {content: url("assets/icones/mail-black.jpg");}
+                }
+                &:hover:first-of-type {
+                    img {
+                        content: url("assets/icones/tel-black.jpg");
+                    }
+                }
             }
         }
     }
@@ -159,7 +168,9 @@ a > .annonce {
     }
 }
 .main-show-pictos {
+    //overflow-x: auto;
     ul {
+        overflow-x: auto;
         display: flex;
         list-style: none;
         padding: 0;
@@ -170,6 +181,9 @@ a > .annonce {
             flex-direction: column;
             align-items: center;
             margin-right: 1.2em;
+            p {
+                white-space: nowrap;
+            }
         }
     }
 }
