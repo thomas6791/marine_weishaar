@@ -16,9 +16,9 @@
                 <ul>
                     <li><%= image_tag "type-bien.png", width:64 %><p><%= @annonce.type_bien if !@annonce.type_bien.nil? %></p></li>
                     <li><%= image_tag "surface.png", width:64 %><p><%= @annonce.surface if !@annonce.surface.nil? %>m<SUP>2</SUP></p></li>
-                    <li><%= image_tag "pieces.png", width:64 %><p><%= @annonce.nbre_piece if !@annonce.nbre_piece.nil? %> pièces</p></li>
-                    <li><%= image_tag "chambre.png", width:64 %><p><%= @annonce.nbre_chambre if !@annonce.nbre_chambre.nil? %> chambres</p></li>
-                    <li><%= image_tag "baignoire.png", width:64 %><p><%= @annonce.nbre_bain if !@annonce.nbre_bain.nil? %> salles de bain</p></li>
+                    <li><% word = @annonce.nbre_piece > 1 ? "pièces" : "pièce" %><%= image_tag "pieces.png", width:64 %><p><%= @annonce.nbre_piece %> <%= word %></p></li>
+                    <li><% word = @annonce.nbre_chambre > 1 ? "chambres" : "chambre" %><%= image_tag "chambre.png", width:64 %><p><%= @annonce.nbre_chambre %> <%= word %></p></li>
+                    <li><% word = @annonce.nbre_bain > 1 ? "salles de bain" : "salle de bain" %><%= image_tag "baignoire.png", width:64 %><p><%= @annonce.nbre_bain %> <%= word %></p></li>
                 </ul>
             </div>
         </div>

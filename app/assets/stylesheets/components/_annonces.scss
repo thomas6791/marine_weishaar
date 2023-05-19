@@ -134,6 +134,14 @@ a > .annonce {
             a {
                 padding: 5px;
                 img { width: 40px;}
+                &:hover {
+                    img {content: url("assets/icones/mail-black.jpg");}
+                }
+                &:hover:first-of-type {
+                    img {
+                        content: url("assets/icones/tel-black.jpg");
+                    }
+                }
             }
         }
     }
